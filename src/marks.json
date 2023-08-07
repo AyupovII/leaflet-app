@@ -1,0 +1,44 @@
+[
+  [
+    {
+      "geocode": [59.84660399, 30.29496392],
+      "popUp": "First mark"
+    },
+    {
+      "geocode": [59.82934196, 30.42423701],
+      "popUp": "Second mark"
+    },
+    {
+      "geocode": [59.83567701, 30.38064206],
+      "popUp": "Third mark"
+    }
+  ],
+  [
+    {
+      "geocode": [59.82934196, 30.42423701],
+      "popUp": "First mark"
+    },
+    {
+      "geocode": [59.82761295, 30.41705607],
+      "popUp": "Second mark"
+    },
+    {
+      "geocode": [59.84660399, 30.29496392],
+      "popUp": "Third mark"
+    }
+  ],
+  [
+    {
+      "geocode": [59.83567701, 30.38064206],
+      "popUp": "First mark"
+    },
+    {
+      "geocode": [59.84660399, 30.29496392],
+      "popUp": "Second mark"
+    },
+    {
+      "geocode": [59.82761295, 30.41705607],
+      "popUp": "Third mark"
+    }
+  ]
+]
