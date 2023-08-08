@@ -1,7 +1,7 @@
 import { call, put, takeEvery, select } from "redux-saga/effects";
 import { getRouteMapSuccess } from "./routeMapState"
 
-function* workGetRouteMapFetch(action) {
+function* workGetRouteMapFetch() {
   const currentRoute = yield select((state=>state.routeMap.currentRoute));
   const test = currentRoute.map(el=>el.geocode).join(";");
   

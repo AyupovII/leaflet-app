@@ -1,11 +1,28 @@
-.container{
-  background-color: rgb(231, 108, 108);
-  height: 100vh;
+.container {
+  background-color: rgb(230, 207, 207);
+  // height: 100vh;
   width: 50%;
-};
-.router{
-  &:hover{
-    background-color: green;
+  min-width: 472px;
+  border: 1px solid black
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+
+  td,
+  th {
+    border: 1px solid black
+  }
+}
+
+.router {
+  &:hover {
+    background-color: rgb(194, 191, 191);
     cursor: pointer;
   }
+}
+
+.geocode {
+  white-space: pre-wrap
 }

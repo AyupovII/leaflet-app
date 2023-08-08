@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import routerArray from "./marks.json";
+import { IinitialState } from "./types/interface";
 
 export const routeMapSlice = createSlice({
   name: "routeMaps",
@@ -8,7 +9,7 @@ export const routeMapSlice = createSlice({
     currentRoute: routerArray[0],
     allMarkers: routerArray,
     isLoading: false
-  },
+  } as IinitialState,
   reducers: {
     getRouteMapFetch: (state) => {
       state.isLoading = true;
@@ -21,7 +22,7 @@ export const routeMapSlice = createSlice({
       state.isLoading = false;
     }, 
     setCurrentRoute: (state, action)=>{
-      state.currentRoute = routerArray[action.payload]
+      state.currentRoute = state.allMarkers[action.payload]
     },
 
   }
