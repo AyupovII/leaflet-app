@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/leaflet-app/static/css/main.bc70d245.css",
-    "main.js": "/leaflet-app/static/js/main.b68944a2.js",
+    "main.js": "/leaflet-app/static/js/main.ed46808c.js",
     "index.html": "/leaflet-app/index.html",
     "main.bc70d245.css.map": "/leaflet-app/static/css/main.bc70d245.css.map",
-    "main.b68944a2.js.map": "/leaflet-app/static/js/main.b68944a2.js.map"
+    "main.ed46808c.js.map": "/leaflet-app/static/js/main.ed46808c.js.map"
   },
   "entrypoints": [
     "static/css/main.bc70d245.css",
-    "static/js/main.b68944a2.js"
+    "static/js/main.ed46808c.js"
   ]
 }
