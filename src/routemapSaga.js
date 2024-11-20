@@ -5,9 +5,9 @@ function* workGetRouteMapFetch() {
   const currentRoute = yield select((state=>state.routeMap.currentRoute));
   const test = currentRoute.map(el=>el.geocode).join(";");
   
-  const routeMaps = yield call(() => fetch(`http://router.project-osrm.org/route/v1/driving/${test}?overview=full`));
+  const routeMaps = yield call(() => fetch(`http://router.project-osrm.org/trip/v1/car/${test}?geometries=geojson&source=first&destination=last`));
   const formattedRouteMaps = yield routeMaps.json();
-  yield put(getRouteMapSuccess(formattedRouteMaps.waypoints.map(el=>el.location)))
+  yield put(getRouteMapSuccess(formattedRouteMaps.trips[0].geometry.coordinates.map(el=>el)));
 }
 
 function* routeMapSaga() {

@@ -15,7 +15,7 @@ const store = configureStore({
   },
   middleware: [saga]
 })
-saga.run(routeMapSaga);
+saga.run(routeMapSaga).result();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

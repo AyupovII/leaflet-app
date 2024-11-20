@@ -23,11 +23,10 @@ const MapArea = () => {
   const routeMap = useSelector((state: any) => state.routeMap.routeMap);
   const currentRoute = useSelector((state: any) => state.routeMap.currentRoute as TypeRoute[]);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getRouteMapFetch())
   }, [dispatch, currentRoute]);
-  
+
   return (
     <div className={style.container}>
       <MapContainer center={routeMap[1]} zoom={12} className={style["leaflet-container"]}>
@@ -36,15 +35,16 @@ const MapArea = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/* <MarkerClusterGroup> */} 
-        {/* Убрал группировку для видимости всех маркеров */}
+        <MarkerClusterGroup>
+          {/* Убрал группировку для видимости всех маркеров */}
           <Polyline positions={[routeMap]} />
           {currentRoute.map((marker): JSX.Element => (
             <Marker autoPan={true} position={marker.geocode} icon={customIcon}>
               <Popup>{marker.popUp}</Popup>
             </Marker>
           ))}
-        {/* </MarkerClusterGroup> */}
+          <Polyline positions={[routeMap]} />
+        </MarkerClusterGroup>
       </MapContainer>
     </div>
   )
